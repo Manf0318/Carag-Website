@@ -1,0 +1,92 @@
+<html lang="en">
+<head>
+   <title>Home Page</title>
+   <link rel="stylesheet" href="Styles.css">
+</head>
+<body>
+<div id="preloader">
+  <div class="loader-content">
+    <div class="spinner"></div>
+    <p class="loading-text">Loading...</p>
+  </div>
+</div>
+
+<header>
+   <h1>My Website</h1>
+   <nav>
+	  <a href="Carag-Website.html">Home</a>
+	  <a href="RESUME\Resume.html">About</a>
+	  <a href="ContactPage\ContactPage.html">Contact</a>
+	  <button id="darkModeToggle">Toggle Dark Mode</button>
+   </nav>
+</header>
+
+<div class="content-wrapper">
+   <div class="main-content">
+      <div class="container1">
+	  <div class="column2">
+            <h2>About me</h2>
+			 <img src="Images\ProfilePic.png" style="width: 300px; border-radius: 10px">
+			<p>Hello! I'm Manfreid Jiro A. Carag, a student at FEU Institute of Technology with a strong passion for web design and development. Gamer at heart, I have an eye for design that ensures the quality of each of my works..</p>
+			<p>My journey started with small projects like my first website and periodic table, and I'm now exploring advanced layouts and user interfaces. I'm particularly interested in responsive design and building user-friendly web experiences.</p>
+         </div>
+      </div>
+
+      <div class="container1">
+		   <div class="column1 clickable" data-href="OtherWebsites\SDGWebsite1.html">
+             <h1>My First Website</h1>
+             <p>Project A</p>
+			 <div class="more-info">View the starting point of my Web Design Journey</div>
+		   </div>
+         
+         <div class="column1 clickable" data-href="OtherWebsites\Periodic Table.html"">
+            <h1>Periodic Table</h1>
+            <p>Project B</p>
+			<div class="more-info">View how I applied table tags to create a periodic table</div>
+         </div>
+      </div>
+
+      <div class="container1">
+         <div class="column1 clickable" data-href="OtherWebsites\SDGs Form.html"">
+            <h1>My First Form</h1>
+            <p>Project C</p>
+			<div class="more-info">View how I used the form tags to create my first form</div>
+         </div>
+         <div class="column1 clickable" data-href="OtherWebsites\Grid.html"">
+            <h1>960 Grid</h1>
+            <p>Project D</p>
+			<div class="more-info">View how I implemented principles to create a 960 Grid System</div>
+         </div>
+      </div>
+   </div>
+</div>
+
+<footer>
+   <p>Manfreid Jiro A. Carag, FEU Institute of Technology &copy; 2025</p>
+</footer>
+
+</body>
+<script>
+	document.querySelectorAll('.clickable').forEach(div => {
+	 div.addEventListener('click', () => {
+		window.location.href = div.dataset.href;
+      });
+	  div.style.cursor = 'pointer';
+	 });
+	 
+	    const toggle = document.getElementById('darkModeToggle');
+
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+    });
+   
+    window.addEventListener("load", function () {
+      const preloader = document.getElementById("preloader");
+      setTimeout(() => {
+         preloader.style.opacity = "0";
+         preloader.style.pointerEvents = "none";
+         setTimeout(() => preloader.style.display = "none", 500);
+      }, 1000);
+   });
+</script>
+</html>

@@ -1,0 +1,95 @@
+<html>
+	<head>
+		<title>United Nations SDGs</title>
+		<link rel="stylesheet" href="Styles.css">
+	</head>
+	<body>
+	<div id="preloader">
+	  <div class="loader-content">
+		<div class="spinner"></div>
+		<p class="loading-text">Loading...</p>
+      </div>
+	</div>
+	
+	<header>
+	  <h1 class="Header"> United Nations SDGs Form </h1>
+	  <nav>
+	    <a href="..\index.html">Home</a>
+		<a href="..\RESUME\Resume.html">About</a>
+		<a href="..\ContactPage\ContactPage.html">Contact</a>
+	  </nav>
+	</header>  
+		<h1>United Nations' Sustainable Development Goals</h1>
+		<h2>Registration Form</h2>
+		<form>
+			<div class="divider">
+			<br><label for="fname">Full Name:</label><br>
+			<input type="text" id="fname" name="fname" placeholder="Last Name, First Name, M.I."><br>
+			
+			<label for="email">Email:</label><br>
+			<input type="text" id="email" name="email" placeholder="Email Address"><br>
+			
+			<label for="age">Age:</label><br>
+			<input type="text" id="age" name="age" placeholder="Age"><br><br>
+			
+			<label> Gender:</label><br>
+			<select id="gender" name="gender">
+			<option value="Male">Male</option>
+			<option value="Female">Female</option>
+			<option value="LGBTQIA+">LGBTQIA+</option>
+			<option value="Other">Other</option>
+			<option value="DoNotSpecify">Do not specify</option>
+			</select>
+			
+			<br><label>List of SDGs</label><br><br>
+			<input type="checkbox" id="SDG1" name="SDG1" value="SDG1">
+			<label for="SDG1">No Poverty</label><br>
+			<input type="checkbox" id="SDG2" name="SDG2" value="SDG2">
+			<label for="SDG2">Zero Hunger</label><br>
+			<input type="checkbox" id="SDG3" name="SDG3" value="SDG3">
+			<label for="SDG3">Good Health and Well-Being</label><br>
+			<input type="checkbox" id="SDG4" name="SDG4" value="SDG4">
+			<label for="SDG4">Quality Education</label><br>
+			<input type="checkbox" id="SDG5" name="SDG5" value="SDG5">
+			<label for="SDG5">Gender Equality</label><br>
+			<input type="checkbox" id="SDG6" name="SDG6" value="SDG6">
+			<label for="SDG6">Clean Water and Sanitation</label><br>
+			<input type="checkbox" id="SDG7" name="SDG7" value="SDG7">
+			<label for="SDG7">Affordable and Clean Energy</label><br>
+			<input type="checkbox" id="SDG8" name="SDG8" value="SDG8">
+			<label for="SDG8">Decent Work and Economic Growth</label><br>
+			<input type="checkbox" id="SDG9" name="SDG9" value="SDG9">
+			<label for="SDG9">Industry, Innovation and Infrastructure</label><br>
+			<input type="checkbox" id="SDG10" name="SDG10" value="SDG10">
+			<label for="SDG10">Reduced Inequalities</label><br>
+			<input type="checkbox" id="SDG11" name="SDG11" value="SDG11">
+			<label for="SDG11">Sustainable Cities and Communities</label><br>
+			<input type="checkbox" id="SDG12" name="SDG12" value="SDG12">
+			<label for="SDG12">Responsible Consumption and Production</label><br>
+			<input type="checkbox" id="SDG13" name="SDG13" value="SDG13">
+			<label for="SDG13">Climate Action</label><br>
+			<input type="checkbox" id="SDG14" name="SDG14" value="SDG14">
+			<label for="SDG14">Life below Water</label><br>
+			<input type="checkbox" id="SDG15" name="SDG15" value="SDG15">
+			<label for="SDG15">Life on Land</label><br>
+			<input type="checkbox" id="SDG16" name="SDG16" value="SDG16">
+			<label for="SDG16">Peace, Justice, and Strong Institutions</label><br>
+			<input type="checkbox" id="SDG17" name="SDG17" value="SDG17">
+			<label for="SDG17">Partnerships for the Goals</label><br><br>
+			
+			<input type="submit" value="Submit">
+			</div>
+		</form>
+		<a href="../index.html" id="returnBtn">Return</a>
+	</body>
+	  <script>
+	    window.addEventListener("load", function () {
+      const preloader = document.getElementById("preloader");
+      setTimeout(() => {
+         preloader.style.opacity = "0";
+         preloader.style.pointerEvents = "none";
+         setTimeout(() => preloader.style.display = "none", 500);
+      }, 1000);
+   });
+  </script>
+</html>

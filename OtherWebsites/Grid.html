@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <link rel="stylesheet" href="NavMenu.css">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>2 Column Layout</title>
+   <style>
+       body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+          background-color: #f0f5ff;
+          width: 100%;
+          background-position: center;
+       }
+		
+       h2 {
+          font-size: 30px;
+       }
+		
+	   h3{
+	     font-size: 30px;
+		 color: #00205c;
+	   }
+       .content-wrapper {
+          display: flex;
+          max-width: 960px;
+          margin: 20px auto;
+          background-color: #f0f5ff;
+       }
+
+       .main-content {
+          flex: 1; 
+          margin-right: 20px; 
+       }
+
+       .sidebar {
+          width: 250px;
+		  border-radius: 8px;
+          background-color: #c7dbff;
+          padding: 15px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          position: sticky;
+          top: 0;
+          height: 100%;
+          overflow-y: auto;
+		  margin-top: 10px
+       }
+		
+		.sidebar-sdgs {
+		  list-style: none;
+		  padding: 0;
+		  margin: 0;
+		}
+
+		.sidebar-sdgs li {
+		  margin-bottom: 0.5rem;
+		}
+
+		.sidebar-sdgs li a {
+		  text-decoration: none;
+		  color: #333;
+		  font-size: 17px;
+		  transition: color 0.2s;
+		  }
+
+		.sidebar-sdgs li a:hover {
+		  color: #007BFF;
+		}
+		
+       .container1 {
+          display: flex;
+		  gap: 10px;
+          margin-bottom: 20px;
+          margin-top: 10px;
+       }
+
+       .column1, image-column{
+          width: 48%;
+		  color: #00205c;
+		  gap: 10px;
+          background-color: #c7dbff;
+		  border-radius: 8px;
+          margin-right: 10px;
+          padding: 15px;
+		  transition: 0.2s;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+       }
+	   
+	   .image-column{
+	     width: 100%;
+	   }
+	   
+       .column1:hover {
+          background-color: #003ca8;
+          color: white;
+       }
+		
+		.image-column img{
+		  width: 99%;
+		  height: 100%;
+		  border-radius: 8px;
+		}
+		
+       header {
+          background-color: #0c105a;
+          color: white;
+          text-align: center;
+          padding: 15px 0;
+       }
+
+       .banner {
+          text-align: center;
+          color: white;
+          background-color: #0c105a;
+          padding: 20px;
+          margin: 20px auto;
+       }
+
+       footer {
+          background-color: #0c105a;
+          color: white;
+          text-align: center;
+          padding: 10px;
+          margin-top: 20px;
+       }
+	   
+	   .loader-content {
+		  display: flex;
+		  flex-direction: column;
+		  align-items: center;
+		}
+
+		.spinner {
+		  width: 60px;
+		  height: 60px;
+		  border: 6px solid #f3f3f3;
+		  border-top: 6px solid #c7dbff;
+		  border-radius: 50%;
+		  animation: spin 1s linear infinite;
+		  box-shadow: 0 0 20px #c7dbff, 0 0 40px #c7dbff, 0 0 60px #c7dbff;
+		}
+
+		@keyframes spin {
+		  0% { transform: rotate(0deg); }
+		  100% { transform: rotate(360deg); }
+		}
+
+		.loading-text {
+		  margin-top: 20px;
+		  color: white;
+		  font-size: 20px;
+		  font-family: Arial, sans-serif;
+		  animation: pulse 1.2s infinite ease-in-out;
+		  text-align: center;
+		}
+
+		@keyframes pulse {
+		  0% { opacity: 0.5; }
+		  50% { opacity: 1; }
+		  100% { opacity: 0.5; }
+		}
+
+   </style>
+</head>
+<body>
+	<div id="preloader">
+	  <div class="loader-content">
+		<div class="spinner"></div>
+		<p class="loading-text">Loading...</p>
+	  </div>
+	</div>
+	
+<header>
+   <h1>SDG 14: Life under Water</h1>
+</header>
+
+<div class="banner">
+   <h2>Conserving and sustainably using the oceans, seas, and marine resources for sustainable development.</h2>
+</div>
+
+<div class="content-wrapper">
+   <div class="main-content">
+      <div class="container1">
+         <div class="image-column">
+            <img src="https://images4.alphacoders.com/121/thumb-1920-121336.jpg">
+         </div>
+      </div>
+
+      <div class="container1">
+         <div class="column1">
+            <h1>Events</h1>
+            <p>View recent events</p>
+         </div>
+         <div class="column1">
+            <h1>Organizations</h1>
+            <p>View organizations</p>
+         </div>
+      </div>
+
+      <div class="container1">
+         <div class="column1">
+            <h1>Goals</h1>
+            <p>View current goals</p>
+         </div>
+         <div class="column1">
+            <h1>Take Action</h1>
+            <p>Find out how you can help</p>
+         </div>
+      </div>
+   </div>
+
+   <div class="sidebar">
+      <h3>All SDGs</h3>
+      <ul class="sidebar-sdgs">
+         <li><a href="#">No Poverty</a></li>
+         <li><a href="#">Zero Hunger</a></li>
+         <li><a href="#">Good Health and Well-Being</a></li>
+         <li><a href="#">Quality Education</a></li>
+         <li><a href="#">Gender Equality</a></li>
+         <li><a href="#">Clean Water and Sanitation</a></li>
+         <li><a href="#">Affordable and Clean Energy</a></li>
+         <li><a href="#">Decent Work and Economic Growth</a></li>
+         <li><a href="#">Industry, Innovation, and Infrastructure</a></li>
+         <li><a href="#">Reduced Inequalities</a></li>
+         <li><a href="#">Sustainable Cities and Communities</a></li>
+         <li><a href="#">Responsible Consumption and Production</a></li>
+         <li><a href="#">Climate Action</a></li>
+         <li><a href="#">Life on Land</a></li>
+         <li><a href="#">Peace and Justice Strong Institutions</a></li>
+         <li><a href="#">Partnerships to Achieve the Goal</a></li>
+      </ul>
+   </div>
+</div>
+
+<footer>
+   <p>Sure, FEU Institute of Technology &copy; 2025</p>
+</footer>
+		<a href="../index.html" id="returnBtn">Return</a>
+</body>
+
+	  <script>
+	    window.addEventListener("load", function () {
+      const preloader = document.getElementById("preloader");
+      setTimeout(() => {
+         preloader.style.opacity = "0";
+         preloader.style.pointerEvents = "none";
+         setTimeout(() => preloader.style.display = "none", 500);
+      }, 1000);
+   });
+  </script>
+</html>
